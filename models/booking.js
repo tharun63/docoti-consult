@@ -22,6 +22,7 @@ const bookingschema=new Schema(
     date:String,
     slot:String,
     day:String,
+    category:String,
     mobileno:{
       type:Number,
       unique:true

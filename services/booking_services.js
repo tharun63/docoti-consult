@@ -19,6 +19,18 @@ export default class BookingService {
       let matchQuery={}
       if(request.query.mobileno){
         matchQuery['mobileno']=request.query.mobileno
+      }
+      if(request.query.doctor_id){
+        matchQuery['doctor_id']=request.query.doctor_id
+      }
+      if(request.query.date){
+        matchQuery['date']=request.query.date
+      }
+      if(request.query.slot){
+        matchQuery['slot']=request.query.slot
+      }
+      if(request.query.slot_id){
+        matchQuery['slot_id']=request.query.slot_id
       } 
       Booking.find(matchQuery)
       .then(getallbookings=>{
